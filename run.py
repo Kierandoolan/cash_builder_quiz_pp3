@@ -29,13 +29,14 @@ def introduction():
     else:
         print(f'Invalid choice {name} The game will now restart')
 
+
 def start_game():
 
     """
     question one
     """
 
-    cash = 0
+    
     print('Question Number One for 100euro....\n')
     print('Q1. What is the Capital of Ireland: \nA. Galway \nB. Dublin \nC. Kilkenny \nD. Cork')
     answer = input ('What do you think the answer is :')
@@ -44,19 +45,61 @@ def start_game():
         print(f'Well Done You have won {cash} euro!!')
         decision = input(f'Would you like to answer another question or take the {cash} euro. \nA. Another Question \nB. Keep The Cash :')
         if decision.capitalize() == 'A' or answer.capitalize() == 'Another question':
-                question_two() 
+                return cash 
         else:
-             print ('Thank you for playing the game!')
+             print (f'You have decided to keep the {cash} euro. \nThank you for playing the game!')
     else:
         print('Your wrong! The Answer was B. Dublin. Thanks for playing!')
 
-def question_two():
-    print('question 2')
+def question_two(cash):
+    """
+    Question two function
+    """
+
+    print('Question Number two for 200euro....\n')
+    print('Q2. Who Created the Xbox: \nA. Apple \nB. Sony \nC. Nintendo \nD. Microsoft')
+    answer = input ('What do you think the answer is :')
+    if answer.capitalize() == 'D' or answer.capitalize() == 'Microsoft':
+        cash =+ 100
+        print(f'Well Done You have won {cash} euro!!')
+        decision = input(f'Would you like to answer another question or take the {cash} euro. \nA. Another Question \nB. Keep The Cash :')
+        return cash
+        if decision.capitalize() == 'A' or answer.capitalize() == 'Another question':
+                question_three() 
+        else:
+            print (f'You have decided to keep the {cash} euro. \nThank you for playing the game!')
+    else:
+        print('Your wrong! The Answer was D. Microsoft. Thanks for playing!')
+
+
+def question_three():
+    """
+    question three function
+    """
+    
+
+    print('Question Number three for 200euro....\n')
+    print('Q3. Where is the Car manufacturers Audi From:\nA. Germany \nC B. China\n \nC. U.S.A \nD. England')
+    answer = input ('What do you think the answer is :')
+    if answer.capitalize() == 'A' or answer.capitalize() == 'Germany':
+        cash =+ 100
+        print(f'Well Done You have won {cash} euro!!')
+        decision = input(f'Would you like to answer another question or take the {cash} euro. \nA. Another Question \nB. Keep The Cash :')
+        return cash
+        if decision.capitalize() == 'A' or answer.capitalize() == 'Another question':
+                question_three() 
+        else:
+            print (f'You have decided to keep the {cash} euro. \nThank you for playing the game!')
+    else:
+        print('Your wrong! The Answer was A. Germany. Thanks for playing!')
+
+
 
 def main():
     """
     Main function to run the game
     """
     introduction()
+    question_two(cash)
     
 main()
