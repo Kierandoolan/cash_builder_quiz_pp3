@@ -121,6 +121,9 @@ def question_four():
         introduction()
 
 def question_five():
+    """
+    question five function
+    """
     print('Half way there with 500euro....\n')
     print('Q5. Which of these EU countries does not use the euro as its currency?\nA. Poland\nB. Denmark \nC. Sweden\nD. All of the above  ')
     answer = input ('What do you think the answer is :')
@@ -138,15 +141,52 @@ def question_five():
         introduction()
 
 def question_six():
-    print ('six')
+    """
+    question six function
+    """
+    print('Question number six for 600euro....\n')
+    print('Q6.What color dresses do Chinese women traditionally wear on their wedding day?\nA. Blue \nB. Gold\nC. White \nD. Red ')
+    answer = input ('What do you think the answer is :')
+    if answer.capitalize() == 'D' or answer.capitalize() == 'Red':
+        cash =+ 100
+        print(f'Well Done You have won {cash} euro!!')
+        decision = input(f'Would you like to answer another question or take the {cash} euro. \nA. Another Question \nB. Keep The Cash :')
+        if decision.capitalize() == 'A' or answer.capitalize() == 'Another question':
+                return cash
+        else:
+            print(f'You have decided to keep the {cash} euro. \nThank you for playing the game!')
+            introduction()
+    else:
+        print('Your wrong! The Answer was D. Red. Thanks for playing!')
+        introduction()
     
-
+def question_seven():
+    """
+    question seven function
+    """
+    print('Question number seven for 700euro....\n')
+    print('Q7.How many molecules of oxygen does ozone have?\nA. 1\nB. 2\nC. 3 \nD. 4 ')
+    answer = input ('What do you think the answer is :')
+    if answer.capitalize() == 'C' or answer.capitalize() == 'Three':
+        cash =+ 100
+        print(f'Well Done You have won {cash} euro!!')
+        decision = input(f'Would you like to answer another question or take the {cash} euro. \nA. Another Question \nB. Keep The Cash :')
+        if decision.capitalize() == 'A' or answer.capitalize() == 'Another question':
+                return cash
+        else:
+            print(f'You have decided to keep the {cash} euro. \nThank you for playing the game!')
+            introduction()
+    else:
+        print('Your wrong! The Answer was D. All of the above. Thanks for playing!')
+        introduction()
+    
 
 
 def main():
     """
     Main function to run the game
     """
+    question_six()
     introduction()
     question_two()
     question_three()
